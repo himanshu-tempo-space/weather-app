@@ -23,14 +23,19 @@ const App = () => {
   }, [city]);
   return (
     <>
-      <h1>Weather Information in {cityHeader}</h1>
+    <header>
+      <h1>Weather App</h1>
+    </header>
+    <main>
+      <h2>Weather Information in {cityHeader}</h2>
       <SearchBar setCity={setCity} />
       {data !== undefined ? (
         <Forecast data={data} />
       ) : (
         <h2>Loading...</h2>
       )}
-    </>
+    </main>
+      </>
   );
 };
 

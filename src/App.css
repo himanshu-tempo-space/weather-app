@@ -9,8 +9,20 @@ body {
   background-size: cover;
 }
 
+main {
+  display: grid;
+  place-items: center;
+  gap: 50px;
+}
+
 /* header text */
 h1 {
+  font-size: 3rem;
+  color: #333;
+  text-align: center;
+}
+
+h2 {
   font-size: 2.5rem;
   line-height: 1.2;
   font-weight: 500;
