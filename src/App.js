@@ -19,23 +19,29 @@ const App = () => {
   }
 
   useEffect(() => {
+    if (city.length < 3) {
+
+      window.alert("City name must be at least 3 characters long");
+      return;
+    }
+
     fetchData();
   }, [city]);
   return (
     <>
-    <header>
-      <h1>Weather App</h1>
-    </header>
-    <main>
-      <h2>Weather Information in {cityHeader}</h2>
-      <SearchBar setCity={setCity} />
-      {data !== undefined ? (
-        <Forecast data={data} />
-      ) : (
-        <h2>Loading...</h2>
-      )}
-    </main>
-      </>
+      <header>
+        <h1>Weather App</h1>
+      </header>
+      <main>
+        <h2>Weather Information in {cityHeader}</h2>
+        <SearchBar setCity={setCity} />
+        {data !== undefined ? (
+          <Forecast data={data} />
+        ) : (
+          <h2>Loading...</h2>
+        )}
+      </main>
+    </>
   );
 };
 
