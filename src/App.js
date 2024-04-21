@@ -23,9 +23,11 @@ const App = () => {
 
       window.alert("City name must be at least 3 characters long");
       return;
+    }else{
+      fetchData();
     }
 
-    fetchData();
+  
   }, [city]);
   return (
     <>
